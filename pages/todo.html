@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TODO</title>
+    <link rel="stylesheet" href="../css/styleTodo.css">
+</head>
+
+<body>
+	<main>
+        <!-- ... -->
+		<section class="container">
+		    <h2 id="titulo-form">To Do:</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <input id="do" name="do" type="text" placeholder="to do" class="campo">
+                    <button id="adicionar-todo" class="botao bto-principal">Add</button>
+		        </div>
+		    </form>
+		</section>
+		<section class="container">
+			<input type="text" id="filtrar-tabela" name="filtro" placeholder="search" class="campo">
+			<table>
+				<thead>
+					<tr>
+						<th>To DO</th>
+					</tr>
+				</thead>
+				<tbody id="tabela-todo">
+					
+				</tbody>
+			</table>
+		</section>
+
+		
+	</main>
+
+	<script src="../js/form.js"></script>
+	<script src="../js/remover-todo.js"></script>
+	<script src="../js/filtra.js"></script>
+	<script src="../js/check.js"></script>
+
+</body>
+
+</html>
