@@ -24,7 +24,7 @@ body {
 
 .principal {
     background-color: #FFFFFF;
-    background-image: url("img/home_image_1.png");
+    background-image: url("../img/home_image_1.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 450px;
