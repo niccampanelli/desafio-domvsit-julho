@@ -1,0 +1,144 @@
+:root {
+--light-blue: #F5F8FA;
+--blue-1: #2D88C1;
+--blue-2: #077187;
+--blue-3: #263640;
+--orange: #FF9900;
+--fonte-principal: 'OpenSans';
+}
+
+body {
+    color: #272727;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-color: #FFFFFF;
+    background-image: url("/img/home_image_1.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 450px;
+    background-position-y: top;
+    align-items: center;
+    text-align: center;  
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.container__botao {
+    background-color: var(--orange);
+    border-radius: 4px;
+    padding: 0.5em;
+    color: #F5F8FA;
+    display: block;
+    text-decoration: none;
+    margin-top: 1em;
+}
+
+.container__titulo {
+    font-size: 36px;
+    color: var(--blue-3);
+    font-weight: 700px;
+    margin-bottom: 1em ;   
+}
+
+.container__caixa {
+    margin: 0 11em;
+}
+
+.container__paragrafo {
+    text-align:initial;
+    font-size: 18px;
+}
+
+.secundario {
+    background-color: var(--light-blue);
+    grid-template-columns: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.container__descricao {
+    align-items: center;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 36px;
+    color: #263640;
+}
+
+.container__paragrafo__um {
+    font-size: 24px;
+    color: #263640;
+    margin: 0.5em;
+}
+
+.botao__secundario {
+    display: inline-block;
+    margin: 1em;
+}
+
+.container__descricao {
+    padding: 8em;
+}
+
+.terciario {
+    background-color: #FFFFFF;
+    grid-template-columns: 25% 75%;
+    height: 100vh;
+    display: grid;
+    margin: 0 0 0 10em;
+    align-items: center;
+}
+
+.descricao__titulo__dois {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.container__paragrafo__dois {
+    font-weight: 400;
+    font-size: 20px;
+    text-align:justify;
+    margin-bottom: 0.5em ;
+    margin-top: 0.5em;
+}
+
+.secundario__imagem {
+   width: 380.46px;
+   height: 521px;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.terciario__imagem {
+    width: 380.46px;
+    height: 521px;
+}
+
+.quarto {
+    background-color: var(--light-blue);
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+    display: grid;
+    margin: 0 0;
+    align-items: center;
+}
