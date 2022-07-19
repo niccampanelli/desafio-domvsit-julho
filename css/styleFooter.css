@@ -1,0 +1,139 @@
+footer {
+    color: #ffffff;
+}
+
+.footer__contato {
+    padding: 60px 110px;
+    background-color: var(--blue-3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title form"
+                         "text1 form"
+                         "text2 form"
+                         ". form";
+    row-gap: 20px;
+}
+
+.footer__titulo {
+    font-size: 24px;
+    grid-area: title;
+}
+
+.footer__texto {
+    color: var(--light-text);
+    font-weight: 400;
+}
+
+.footer__texto a {
+    color: var(--light-text);
+}
+
+#footer-content-texto1 {
+    grid-area: text1;
+}
+
+#footer-content-texto2 {
+    grid-area: text2;
+}
+
+.footer__form {
+    display: grid;
+    grid-area: form;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+}
+
+.form__field {
+    border-radius: 6px;
+    padding: 0 8px;
+    border-color: var(--light-text);
+}
+
+.form__field legend {
+    padding: 0 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form__field input, textarea {
+    padding: 5px 8px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#form-contact-textarea {
+    grid-column: span 2;
+}
+
+.form__field textarea {
+    resize: none;
+    height: 100px;
+}
+
+.form__botao {
+    background-color: var(--orange);
+    color: #ffffff;
+    width: fit-content;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.footer__conteudo {
+    padding: 110px;
+    background-color: var(--blue-2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+}
+
+.footer__logo img{
+    filter: grayscale() brightness(10);
+}
+
+.footer__logo h2{
+    color: #ffffff;
+}
+
+.footer__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.footer__social h2 {
+    font-size: 24px;
+}
+
+.footer__redes {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}

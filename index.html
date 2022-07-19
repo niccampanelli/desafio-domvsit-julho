@@ -5,11 +5,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/styleHeader.css">
+        <link rel="stylesheet" href="/css/styleFooter.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<header>
+			<img src="img/logo.svg" alt="Logotipo da marca" class="header__logo">
+			<h1 class="header__titulo">SuaLista.com</h1>
+			<nav class="header__nav">
+				<a href="" class="header__link--active">Home</a>
+				<a href="" class="header__link">Sobre nós</a>
+				<a href="" class="header__link">Contato</a>
+			</nav>
+		</header>
 		<section class="container principal">
 			<div class="container__caixa">
 			<h1 class="container__titulo">Crie, Compartilhe, Use e Planeje sua rotina!</h1>
@@ -56,5 +67,63 @@
 			</div>
 			<img src="img/home_image_3.png" alt="homem" class="terciario__imagem">
 		</section>
+		<footer>
+			<section class="footer__contato">
+				<h2 class="footer__titulo">Ficou com alguma dúvida?</h2>
+				<p class="footer__texto" id="footer-contact-texto1">Preencha o formulário e logo entraremos em contato.</p>
+				<p class="footer__texto" id="footer-contact-texto2">Se preferir, nos mande um e-mail para <a href="mailto:faq@sualista.com.br">faq@sualista.com.br.</a></p>
+				<form class="footer__form">
+					<fieldset class="form__field">
+						<legend>Nome completo</legend>
+						<input title="Nome completo" type="texto" class="form__input">
+					</fieldset>
+					<fieldset class="form__field">
+						<legend>E-mail</legend>
+						<input title="Endereço de e-mail" type="texto" class="form__input">
+					</fieldset>
+					<fieldset class="form__field" id="form-contact-textarea">
+						<legend>Motivo</legend>
+						<textarea title="Motivo do contato" class="form__textarea"></textarea>
+					</fieldset>
+					<button type="submit" class="form__botao">Enviar Formulário</button>
+				</form>
+			</section>
+			<section class="footer__conteudo">
+				<div class="footer__logo">
+					<img src="img/logo.svg" alt="Logotipo da marca">
+					<h2 class="header__titulo">SuaLista.com</h2>
+				</div>
+				<nav class="footer__nav">
+					<a href="" class="footer__link">Home</a>
+					<a href="" class="footer__link">Serviços</a>
+					<a href="" class="footer__link">Contato</a>
+				</nav>
+				<div class="footer__social">
+					<h2>Nossas redes sociais</h2>
+					<ul class="footer__redes">
+						<li class="footer__rede">
+							<a href="https://facebook.com" rel="nofollow">
+								<img src="img/facebook_logo.png" alt="Nosso Facebook">
+							</a>
+						</li>
+						<li class="footer__rede">
+							<a href="https://twitter.com" rel="nofollow">
+								<img src="img/twitter_logo.png" alt="Nosso Twitter">
+							</a>
+						</li>
+						<li class="footer__rede">
+							<a href="https://linkedin.com" rel="nofollow">
+								<img src="img/linkedin_logo.png" alt="Nosso Linkedin">
+							</a>
+						</li>
+						<li class="footer__rede">
+							<a href="https://instagram.com" rel="nofollow">
+								<img src="img/instagram_logo.png" alt="Nosso Instagram">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</footer>
 	</body>
 </html>

@@ -1,0 +1,53 @@
+@keyframes headerLinkAnimation {
+    0%{
+        left: 50%;
+        width: 0%;
+    }
+    100%{
+        left: 0%;
+        width: 100%;
+    }
+}
+
+header {
+    width: 100%;
+    padding: 40px 110px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    column-gap: 12px;
+}
+
+.header__titulo {
+    font-size: 24px;
+    color: var(--blue-2);
+}
+
+.header__nav{
+    padding-left: 50px;
+    display: flex;
+    column-gap: 50px;
+    font-size: 20px;
+}
+
+.header__link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__link--active {
+    position: relative;
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.header__link--active::after{
+    content: "";
+    background-color: var(--orange);
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: headerLinkAnimation .4s ease-in forwards;
+}

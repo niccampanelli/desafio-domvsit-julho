@@ -4,7 +4,8 @@
 --blue-2: #077187;
 --blue-3: #263640;
 --orange: #FF9900;
---fonte-principal: 'OpenSans';
+--light-text: #aaaaaa;
+--fonte-principal: 'OpenSans', sans-serif;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
 
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
