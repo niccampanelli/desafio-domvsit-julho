@@ -29,3 +29,18 @@ function rolarPara(nome){
             break;
     }
 }
+
+// Botão para voltar ao topo com JQuery
+var btn = $("#back-to-top");
+btn.click(function() {
+  $('html, body').animate({scrollTop:0}, 'slow');
+});
+
+// Botão de voltar ao topo só aparece depois do scroll
+$(window).bind('scroll',function() {
+    if($(this).scrollTop() < 300){
+      $("#back-to-top").css("display", "none");
+    } else {
+      $("#back-to-top").css("display", "block");
+    }
+  });
