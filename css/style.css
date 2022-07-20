@@ -4,7 +4,8 @@
 --blue-2: #077187;
 --blue-3: #263640;
 --orange: #FF9900;
---fonte-principal: 'OpenSans';
+--light-text: #aaaaaa;
+--fonte-principal: 'OpenSans', sans-serif;
 }
 
 body {
@@ -16,13 +17,14 @@ body {
 
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 .principal {
     background-color: #FFFFFF;
-    background-image: url("/img/home_image_1.png");
+    background-image: url("../img/home_image_1.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 633px;
