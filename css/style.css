@@ -25,10 +25,10 @@ body {
     background-image: url("/img/home_image_1.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 450px;
+    background-size: 633px;
     background-position-y: top;
     align-items: center;
-    text-align: center;  
+     
 }
 
 .container {
@@ -42,7 +42,7 @@ body {
     border-radius: 4px;
     padding: 0.5em;
     color: #F5F8FA;
-    display: block;
+    display: inline-block;
     text-decoration: none;
     margin-top: 1em;
 }
@@ -51,16 +51,23 @@ body {
     font-size: 36px;
     color: var(--blue-3);
     font-weight: 700px;
-    margin-bottom: 1em ;   
+    margin-bottom: 1em ;
+    text-align: left;
+    
+  
 }
 
 .container__caixa {
-    margin: 0 11em;
+    margin-top: 0;
+    margin-right: 12em;
+    margin-bottom: 0;
+    margin-left: 6em;
+    
 }
 
 .container__paragrafo {
-    text-align:initial;
-    font-size: 18px;
+    text-align: left;
+    font-size: 20px;
 }
 
 .secundario {
@@ -89,6 +96,9 @@ body {
 .botao__secundario {
     display: inline-block;
     margin: 1em;
+    text-align: left;
+    
+   
 }
 
 .container__descricao {
@@ -100,19 +110,24 @@ body {
     grid-template-columns: 25% 75%;
     height: 100vh;
     display: grid;
-    margin: 0 0 0 10em;
     align-items: center;
+    margin-top: 0;
+    margin-right: 4em;
+    margin-bottom: 0;
+    margin-left: 6em;
 }
 
 .descricao__titulo__dois {
     font-weight: 700;
     font-size: 24px;
+    text-align: left;
+    
 }
 
 .container__paragrafo__dois {
     font-weight: 400;
     font-size: 20px;
-    text-align:justify;
+    text-align:left;
     margin-bottom: 0.5em ;
     margin-top: 0.5em;
 }
@@ -141,4 +156,12 @@ body {
     display: grid;
     margin: 0 0;
     align-items: center;
+}
+
+.container__descricao__quarto {
+    margin-top: 0;
+    margin-right: 12em;
+    margin-bottom: 0;
+    margin-left: 6em;
+    text-align: left;
 }
