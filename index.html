@@ -16,9 +16,9 @@
 			<img src="./img/logo.svg" alt="Logotipo da marca" class="header__logo">
 			<h1 class="header__titulo">SuaLista.com</h1>
 			<nav class="header__nav">
-				<a href="" class="header__link--active">Home</a>
-				<a href="" class="header__link">Sobre nós</a>
-				<a href="" class="header__link">Contato</a>
+				<a href="#" onclick="rolarPara('home'); return false;" class="header__link--active">Home</a>
+				<a href="#" onclick="rolarPara('sobre'); return false;" class="header__link">Sobre nós</a>
+				<a href="#" onclick="rolarPara('contato'); return false;" class="header__link">Contato</a>
 			</nav>
 		</header>
 		<section class="container principal">
@@ -94,9 +94,9 @@
 					<h2 class="header__titulo">SuaLista.com</h2>
 				</div>
 				<nav class="footer__nav">
-					<a href="" class="footer__link">Home</a>
-					<a href="" class="footer__link">Sobre nós</a>
-					<a href="" class="footer__link">Contato</a>
+					<a href="#" onclick="rolarPara('home'); return false;" class="footer__link">Home</a>
+					<a href="#" onclick="rolarPara('sobre'); return false;" class="footer__link">Sobre nós</a>
+					<a href="#" onclick="rolarPara('contato'); return false;" class="footer__link">Contato</a>
 				</nav>
 				<div class="footer__social">
 					<h2>Nossas redes sociais</h2>
@@ -125,5 +125,7 @@
 				</div>
 			</section>
 		</footer>
+
+		<script src="./js/headerScroll.js" defer></script>
 	</body>
 </html>
