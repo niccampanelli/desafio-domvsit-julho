@@ -10,22 +10,32 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<!--Material and JQuery CDN-->
+		<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+		<!--Material and JQuery CDN-->
 	</head>
 	<body>
+		<button id="back-to-top" class="mdc-fab" aria-label="Favorite">
+			<div class="mdc-fab__ripple"></div>
+			<span class="mdc-fab__icon material-icons">arrow_upward</span>
+		  </button>
 		<header>
 			<img src="./img/logo.svg" alt="Logotipo da marca" class="header__logo">
 			<h1 class="header__titulo">SuaLista.com</h1>
 			<nav class="header__nav">
-				<a href="" class="header__link--active">Home</a>
-				<a href="" class="header__link">Sobre nós</a>
-				<a href="" class="header__link">Contato</a>
+				<a href="#" onclick="rolarPara('home'); return false;" class="header__link--active">Home</a>
+				<a href="#" onclick="rolarPara('sobre'); return false;" class="header__link">Sobre nós</a>
+				<a href="#" onclick="rolarPara('contato'); return false;" class="header__link">Contato</a>
 			</nav>
 		</header>
 		<section class="container principal">
 			<div class="container__caixa">
 				<h1 class="container__titulo">Crie, Compartilhe, Use e Planeje sua rotina!</h1>
 				<p class="container__paragrafo">Com o SuaLista.com você pode criar sua rotina, ou até mesmo ter acesso a templates criados por usuários reais que tem o mesmo objetivo que o seu. Comece a usar a agora mesmo!</p>
-				<a href="" class="container__botao">Começar agora</a>
+				<a href="pages/todo.html" class="container__botao">Começar agora</a>
 			</div>
 		</section>
 		<section class="container secundario">
@@ -55,7 +65,7 @@
 				<p class="container__paragrafo__dois">Com o SuaLista.com você pode planejar sua rotina de maneira rápida e fácil com toda a praticidade que a tecnologia tem para oferecer, sem sair de casa e o melhor, totalmente gratuito!</p>
 				<p class="container__paragrafo__dois">Com o acesso a plataforma você pode visualizar inúmeros templates de rotinas criadas pelos nossos usuários e adicionar ao seu perfil, nós temos a ferramenta perfeita para te ajudar.</p>
 				<p class="container__paragrafo__dois">Tá esperando o quê? Comece a se planejar agora mesmo!</p>
-				<a href="" class="container__botao botao__secundario">Criar minha rotina</a>
+				<a href="pages/todo.html" class="container__botao botao__secundario">Criar minha rotina</a>
 			</div>
 		</section>
 		<section class="container quarto">
@@ -63,7 +73,7 @@
 				<h2 class="descricao__titulo__dois">Para quem é o SuaLista.com?</h2>
 				<p class="container__paragrafo__dois">O SuaLista.com é para todos que querem se organizar e manter os focos nas atividades que se comprometem a realizar, seja consciliando o trabalhando com o estudo, o estudo com a academia, o SuaLista.com está aqui para te ajudar!</p>
 				<p class="container__paragrafo__dois">Não perca mais tempo e crie sua lista de rotinas!</p>
-				<a href="" class="container__botao botao__secundario">Criar minha rotina</a>
+				<a href="pages/todo.html" class="container__botao botao__secundario">Criar minha rotina</a>
 			</div>
 			<img src="./img/home_image_3.png" alt="homem" class="terciario__imagem">
 		</section>
@@ -94,9 +104,9 @@
 					<h2 class="header__titulo">SuaLista.com</h2>
 				</div>
 				<nav class="footer__nav">
-					<a href="" class="footer__link">Home</a>
-					<a href="" class="footer__link">Sobre nós</a>
-					<a href="" class="footer__link">Contato</a>
+					<a href="#" onclick="rolarPara('home'); return false;" class="footer__link">Home</a>
+					<a href="#" onclick="rolarPara('sobre'); return false;" class="footer__link">Sobre nós</a>
+					<a href="#" onclick="rolarPara('contato'); return false;" class="footer__link">Contato</a>
 				</nav>
 				<div class="footer__social">
 					<h2>Nossas redes sociais</h2>
@@ -125,5 +135,7 @@
 				</div>
 			</section>
 		</footer>
+
+		<script src="./js/headerScroll.js" defer></script>
 	</body>
 </html>
