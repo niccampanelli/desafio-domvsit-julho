@@ -1,5 +1,6 @@
 :root {
 	--light-blue: #F5F8FA;
+	--selecionado: #000;
 	--blue-1: #2D88C1;
 	--blue-2: #077187;
 	--blue-3: #263640;
@@ -145,6 +146,7 @@ body {
 	box-shadow: 8px 0px 6px rgba(24, 39, 75, 0.12);
 	font-size: 16px;
 	font-weight: 600;
+	transition: 0.3s all;
 }
 
 .categoria img {
@@ -178,10 +180,34 @@ body {
 }
 
 
+.task{
+	grid-column-start: 2; 
+	grid-column-end: 2;
+	grid-row-start: 1; 
+	grid-row-end: 1;
+	transition: 0.3s all;
+	display: none;
+}
+
+.task__base{
+	display: block;
+}
+
+.task__trabalho{
+	z-index: 9999;
+}
+
 .task img {
 	width: 100%;
 	height: 30vh;
 }
+
+/* .img__categoria{
+	background-image: url(../img/Rectangle.png);
+	width: 100%;
+	height: 30vh;
+} */
+
 
 
 .doTable {
@@ -189,6 +215,22 @@ body {
 	background-color: #D4E3EB;
 	width: 100%;
 	height: 70vh;
+}
+
+.titulo-categoria-tabela{
+	font-weight: 700;
+	font-size: 24px;
+	padding: 30px;
+	padding-bottom: 0;
+}
+
+.escondido{
+	display: block;
+	z-index: 999;
+}
+
+.categoria__selecionada{
+	border: 1px solid var(--selecionado);
 }
 
 .campo {
@@ -317,111 +359,3 @@ body {
 
 
 
-
-/* section {
-	margin: 2em 0;
-	overflow: hidden;
-}
-
-section h2 {
-	font-size: 3em;
-	display: block;
-	padding-bottom: .5em;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: .5em;
-}
-
-table {
-	width: 100%;
-	margin-bottom: .5em;
-	table-layout: fixed;
-
-}
-
-td,
-th {
-	padding: .7em;
-	margin: 0;
-	border: 1px solid #ccc;
-	text-align: center;
-	border-radius: 15px;
-
-}
-
-th {
-	font-weight: bold;
-	background-color: #EEE;
-	border-radius: 15px;
-
-}
-
-
-
-.campo {
-	margin: 0;
-	padding-bottom: 1em;
-	width: 100%;
-	border: 1px solid #ccc;
-	padding: .7em;
-	width: 100%;
-	border-radius: 15px;
-
-}
-
-
-
-
-button {
-	padding: .5em 2em;
-	border: 0;
-	border-bottom: 3px solid;
-	font-size: 1.2em;
-	cursor: pointer;
-	margin: 0;
-	margin-top: -3px;
-	color: #fff;
-	background-color: #0c8cd3;
-	border-color: #04324c;
-	width: 20%;
-	display: block;
-	clear: both;
-	margin: 10px 0px;
-	border-radius: 15px;
-
-
-}
-
-
-
-
-.campo-invalido {
-	border: 1px solid red;
-}
-
-
-#mensagens-erro {
-	color: red;
-}
-
-.fadeOut {
-	opacity: 0;
-	transition: 0.5s;
-}
-
-#filtrar-tabela {
-	width: 200px;
-	height: 35px;
-	border-radius: 15px;
-}
-
-.invisivel {
-	display: none;
-}
-
-
-
-.checked {
-	background-color: #222;
-	color: #666;
-	transition: all 0.5s;
-} */
