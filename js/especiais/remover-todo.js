@@ -1,5 +1,5 @@
 
-var tabela = document.querySelector("tbody");
+var tabela = document.querySelector(".tbody__especiais");
 
 tabela.addEventListener("dblclick", function(event) {
     event.target.parentNode.classList.add("fadeOut")
