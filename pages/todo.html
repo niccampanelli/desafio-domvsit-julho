@@ -1,293 +1,335 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TODO</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/styleTodo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/562ea5297b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<title>TODO</title>
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/styleTodo.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/562ea5297b.js" crossorigin="anonymous"></script>
+  <body>
+    <main>
+      <header class="header">
+        <div class="header__logo">
+          <img alt="Logotipo da marca" src="../img/logo_white.svg" />
+          <h1 class="header__titulo">SuaLista.com</h1>
+        </div>
+        <input
+          class="search"
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Pesquisar"
+        />
+        <div class="user">
+          <img src="../img/User_image.png" alt="" />
+          <p class="nome__user">Fábio Almeida</p>
+          <div class="vertical__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
 
+      <sction class="container">
+        <div class="categorias">
+          <div class="titulo__categorias">
+            <h2 class="nova__rotina">Nova Rotina</h2>
+            <h3 class="subtitulo">Categorias</h3>
+          </div>
+          <div class="rotina">
+            <div class="categoria trabalho" onclick="trabalhoTodo()">
+              <img src="../img/TrabalhoIcon.svg" alt="Icone de Trabalho" />
+              <h2 class="titulo__categoria">Trabalho</h2>
+            </div>
+            <div class="categoria esporte" onclick="esportesTodo()">
+              <img src="../img/EsporteIcon.svg" alt="Icone de Esporte" />
 
-</head>
+              <h2 class="titulo__categoria">Esporte</h2>
+            </div>
+            <div class="categoria estudo" onclick="estudoTodo()">
+              <img src="../img/EstudoIcon.svg" alt="Icone de Estudo" />
 
-<body>
-	<main>
-		<header class="header">
-			<div class="header__logo">
-				<img alt="Logotipo da marca" src="../img/logo_white.svg">
-				<h1 class="header__titulo">SuaLista.com</h1>
-			</div>
-			<input class="search" type="text" name="search" id="search" placeholder="Pesquisar">
-			<div class="user">
-				<img src="../img/User_image.png" alt="">
-				<p class="nome__user">Fábio Almeida</p>
-				<div class="vertical__menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</header>
+              <h2 class="titulo__categoria">Estudos</h2>
+            </div>
+            <div class="categoria academia" onclick="academiaTodo()">
+              <img src="../img/GymIcon.svg" alt="Icone de Academia" />
 
-		<sction class="container">
-			<div class="categorias">
-				<div class="titulo__categorias">
-					<h2 class="nova__rotina">Nova Rotina</h2>
-					<h3 class="subtitulo">Categorias</h3>
-				</div>
-				<div class="rotina" id="rotinas_categorias">
-					<div class="categoria trabalho" role="trabalho">
-						<img src="../img/TrabalhoIcon.svg" alt="Icone de Trabalho">
-						<h2 class="titulo__categoria">Trabalho</h2>
-					</div>
-					<div class="categoria esporte" role="esporte">
-						<img src="../img/EsporteIcon.svg" alt="Icone de Esporte">
+              <h2 class="titulo__categoria">Academia</h2>
+            </div>
+            <div class="categoria lazer" onclick="lazerTodo()">
+              <img src="../img/LazerIcon.svg" alt="Icone de Lazer" />
 
-						<h2 class="titulo__categoria">Esporte</h2>
-					</div>
-					<div class="categoria estudo" role="estudos">
-						<img src="../img/EstudoIcon.svg" alt="Icone de Estudo">
+              <h2 class="titulo__categoria">Férias / Lazer</h2>
+            </div>
+            <div class="categoria especiais" onclick="especiaisTodo()">
+              <img src="../img/EspeciaisIcon.svg" alt="Icone de Especiais" />
 
-						<h2 class="titulo__categoria">Estudos</h2>
-					</div>
-					<div class="categoria academia" role="academia">
-						<img src="../img/GymIcon.svg" alt="Icone de Academia">
+              <h2 class="titulo__categoria">Cuidados Especiais</h2>
+            </div>
+          </div>
+        </div>
 
-						<h2 class="titulo__categoria">Academia</h2>
-					</div>
-					<div class="categoria lazer" role="lazer">
-						<img src="../img/LazerIcon.svg" alt="Icone de Lazer">
+        <div class="task task__base">
+          <div class="img__categoria">
+            <img src="../img/Rectangle.png" alt="Imagem" />
+          </div>
+          <div class="doTable">
+            <h2 class="titulo-categoria-tabela">Categoria</h2>
+            <form id="form-adiciona-base">
+              <input
+                id="do"
+                name="do"
+                type="text"
+                placeholder="Adicionar nome"
+                class="campo"
+				disabled
+              />
+            </form>
+            <div class="table">
+              <table>
+                <thead class="table__thead">
+                  <th id="adicionar-todo-base" class="botao bto-principal">
+                    <img src="../img/akar-icons_plus.svg" alt="Icone de Mais" />
+                    Adicionar uma Tarefa
+                    <hr />
+                  </th>
+                  <th><ul id="mensagens-erro-base"></ul></th>
+                </thead>
+                <tbody id="tabela-todo" class="tbody__base"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-						<h2 class="titulo__categoria">Férias / Lazer</h2>
-					</div>
-					<div class="categoria especiais" role="cuidados">
-						<img src="../img/EspeciaisIcon.svg" alt="Icone de Especiais">
+        <div class="task task__trabalho">
+          <div class="img__categoria">
+            <img src="../img/trabalho.png" alt="Imagem" />
+          </div>
+          <div class="doTable">
+            <h2 class="titulo-categoria-tabela">Trabalho</h2>
+            <form id="form-adiciona-trabalho">
+              <input
+                id="do"
+                name="do"
+                type="text"
+                placeholder="Adicionar nome"
+                class="campo"
+              />
+            </form>
+            <div class="table">
+              <table>
+                <thead class="table__thead">
+                  <th id="adicionar-todo-trabalho" class="botao bto-principal">
+                    <img src="../img/akar-icons_plus.svg" alt="Icone de Mais" />
+                    Adicionar uma Tarefa
+                    <hr />
+                  </th>
+                  <th><ul id="mensagens-erro-trabalho"></ul></th>
+                </thead>
+                <tbody id="tabela-todo" class="tbody__trabalho"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-						<h2 class="titulo__categoria">Cuidados Especiais</h2>
-					</div>
-				</div>
-			</div>
+        <div class="task task__esporte">
+          <div class="img__categoria">
+            <img src="../img/esporte.png" alt="Imagem" />
+          </div>
+          <div class="doTable">
+            <h2 class="titulo-categoria-tabela">Esportes</h2>
+            <form id="form-adiciona-esporte">
+              <input
+                id="do"
+                name="do"
+                type="text"
+                placeholder="Adicionar nome"
+                class="campo"
+              />
+            </form>
+            <div class="table">
+              <table>
+                <thead class="table__thead">
+                  <th id="adicionar-todo-esporte" class="botao bto-principal">
+                    <img src="../img/akar-icons_plus.svg" alt="Icone de Mais" />
+                    Adicionar uma Tarefa
+                    <hr />
+                  </th>
+                  <th><ul id="mensagens-erro-esporte"></ul></th>
+                </thead>
+                <tbody id="tabela-todo" class="tbody__esporte"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
+        <div class="task task__estudo">
+          <div class="img__categoria">
+            <img src="../img/estudo.png" alt="Imagem" />
+          </div>
+          <div class="doTable">
+            <h2 class="titulo-categoria-tabela">Estudos</h2>
+            <form id="form-adiciona-estudo">
+              <input
+                id="do"
+                name="do"
+                type="text"
+                placeholder="Adicionar nome"
+                class="campo"
+              />
+            </form>
+            <div class="table">
+              <table>
+                <thead class="table__thead">
+                  <th id="adicionar-todo-estudo" class="botao bto-principal">
+                    <img src="../img/akar-icons_plus.svg" alt="Icone de Mais" />
+                    Adicionar uma Tarefa
+                    <hr />
+                  </th>
+                  <th><ul id="mensagens-erro-estudo"></ul></th>
+                </thead>
+                <tbody id="tabela-todo" class="tbody__estudo"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-			<div class="task task__base">
-				<div class="img__categoria">
-					<img src="../img/Rectangle.png" alt="Imagem">
-				</div>
-				<div class="doTable">
-					<h2 class="titulo-categoria-tabela">Categoria</h2>
-					<form id="form-adiciona">
-						<input id="do" name="do" type="text" placeholder="Adicionar nome" class="campo">
-					</form>
-					<div class="table">
-						<table>
-							<thead class="table__thead">
-								<th id="adicionar-todo" class="botao bto-principal">
-									 <img src="../img/akar-icons_plus.svg" alt="Icone de Mais">
-									 Adicionar uma Tarefa <hr>
-								</th>
-								<th><ul id="mensagens-erro"></ul></th>
-							</thead>
-							<tbody id="tabela-todo"></tbody>
-						</table>
-					</div>
-				</div>
+        <div class="task task__academia">
+          <div class="img__categoria">
+            <img src="../img/academia.png" alt="Imagem" />
+          </div>
+          <div class="doTable">
+            <h2 class="titulo-categoria-tabela">Academia</h2>
+            <form id="form-adiciona-academia">
+              <input
+                id="do"
+                name="do"
+                type="text"
+                placeholder="Adicionar nome"
+                class="campo"
+              />
+            </form>
+            <div class="table">
+              <table>
+                <thead class="table__thead">
+                  <th id="adicionar-todo-academia" class="botao bto-principal">
+                    <img src="../img/akar-icons_plus.svg" alt="Icone de Mais" />
+                    Adicionar uma Tarefa
+                    <hr />
+                  </th>
+                  <th><ul id="mensagens-erro-academia"></ul></th>
+                </thead>
+                <tbody id="tabela-todo" class="tbody__academia"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-			</div>
+        <div class="task task__lazer">
+          <div class="img__categoria">
+            <img src="../img/lazer.png" alt="Imagem" />
+          </div>
+          <div class="doTable">
+            <h2 class="titulo-categoria-tabela">Lazer</h2>
+            <form id="form-adiciona-lazer">
+              <input
+                id="do"
+                name="do"
+                type="text"
+                placeholder="Adicionar nome"
+                class="campo"
+              />
+            </form>
+            <div class="table">
+              <table>
+                <thead class="table__thead">
+                  <th id="adicionar-todo-lazer" class="botao bto-principal">
+                    <img src="../img/akar-icons_plus.svg" alt="Icone de Mais" />
+                    Adicionar uma Tarefa
+                    <hr />
+                  </th>
+                  <th><ul id="mensagens-erro-lazer"></ul></th>
+                </thead>
+                <tbody id="tabela-todo" class="tbody__lazer"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-			<div class="task task__trabalho">
-				<div class="img__categoria">
-					<img src="../img/trabalho.png" alt="Imagem">
-				</div>
-				<div class="doTable">
-					<h2 class="titulo-categoria-tabela">Trabalho</h2>
-					<form id="form-adiciona">
-						<input id="do" name="do" type="text" placeholder="Adicionar nome" class="campo">
-					</form>
-					<div class="table">
-						<table>
-							<thead class="table__thead">
-								<th id="adicionar-todo" class="botao bto-principal">
-									 <img src="../img/akar-icons_plus.svg" alt="Icone de Mais">
-									 Adicionar uma Tarefa <hr>
-								</th>
-								<th><ul id="mensagens-erro"></ul></th>
-							</thead>
-							<tbody id="tabela-todo"></tbody>
-						</table>
-					</div>
-				</div>
+        <div class="task task__especiais">
+          <div class="img__categoria">
+            <img src="../img/especiais.png" alt="Imagem" />
+          </div>
+          <div class="doTable">
+            <h2 class="titulo-categoria-tabela">Cuidados Especiais</h2>
+            <form id="form-adiciona-especiais">
+              <input
+                id="do"
+                name="do"
+                type="text"
+                placeholder="Adicionar nome"
+                class="campo"
+              />
+            </form>
+            <div class="table">
+              <table>
+                <thead class="table__thead">
+                  <th id="adicionar-todo-especiais" class="botao bto-principal">
+                    <img src="../img/akar-icons_plus.svg" alt="Icone de Mais" />
+                    Adicionar uma Tarefa
+                    <hr />
+                  </th>
+                  <th><ul id="mensagens-erro-especiais"></ul></th>
+                </thead>
+                <tbody id="tabela-todo" class="tbody__especiais"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </sction>
+    </main>
 
-			</div>
+    <!-- SCRIPT BASE -->
+    <script src="../js/seleciona-categoria.js"></script>
 
+    <script src="../js/academia/form.js"></script>
+    <script src="../js/academia/check.js"></script>
+    <script src="../js/academia/remover-todo.js"></script>
 
-			<div class="task task__esporte">
-				<div class="img__categoria">
-					<img src="../img/esporte.png" alt="Imagem">
-				</div>
-				<div class="doTable">
-					<h2 class="titulo-categoria-tabela">Esportes</h2>
-					<form id="form-adiciona">
-						<input id="do" name="do" type="text" placeholder="Adicionar nome" class="campo">
-					</form>
-					<div class="table">
-						<table>
-							<thead class="table__thead">
-								<th id="adicionar-todo" class="botao bto-principal">
-									 <img src="../img/akar-icons_plus.svg" alt="Icone de Mais">
-									 Adicionar uma Tarefa <hr>
-								</th>
-								<th><ul id="mensagens-erro"></ul></th>
-							</thead>
-							<tbody id="tabela-todo"></tbody>
-						</table>
-					</div>
-				</div>
+    <script src="../js/base/form.js"></script>
+    <script src="../js/base/check.js"></script>
+    <script src="../js/base/remover-todo.js"></script>
 
-			</div>
+    <script src="../js/especiais/form.js"></script>
+    <script src="../js/especiais/check.js"></script>
+    <script src="../js/especiais/remover-todo.js"></script>
 
+    <script src="../js/esporte/form.js"></script>
+    <script src="../js/esporte/check.js"></script>
+    <script src="../js/esporte/remover-todo.js"></script>
 
-			<div class="task task__estudo">
-				<div class="img__categoria">
-					<img src="../img/estudo.png" alt="Imagem">
-				</div>
-				<div class="doTable">
-					<h2 class="titulo-categoria-tabela">Estudos</h2>
-					<form id="form-adiciona">
-						<input id="do" name="do" type="text" placeholder="Adicionar nome" class="campo">
-					</form>
-					<div class="table">
-						<table>
-							<thead class="table__thead">
-								<th id="adicionar-todo" class="botao bto-principal">
-									 <img src="../img/akar-icons_plus.svg" alt="Icone de Mais">
-									 Adicionar uma Tarefa <hr>
-								</th>
-								<th><ul id="mensagens-erro"></ul></th>
-							</thead>
-							<tbody id="tabela-todo"></tbody>
-						</table>
-					</div>
-				</div>
+    <script src="../js/estudo/form.js"></script>
+    <script src="../js/estudo/check.js"></script>
+    <script src="../js/estudo/remover-todo.js"></script>
 
-			</div>
+    <script src="../js/lazer/form.js"></script>
+    <script src="../js/lazer/check.js"></script>
+    <script src="../js/lazer/remover-todo.js"></script>
 
-			<div class="task task__academia">
-				<div class="img__categoria">
-					<img src="../img/academia.png" alt="Imagem">
-				</div>
-				<div class="doTable">
-					<h2 class="titulo-categoria-tabela">Academia</h2>
-					<form id="form-adiciona">
-						<input id="do" name="do" type="text" placeholder="Adicionar nome" class="campo">
-					</form>
-					<div class="table">
-						<table>
-							<thead class="table__thead">
-								<th id="adicionar-todo" class="botao bto-principal">
-									 <img src="../img/akar-icons_plus.svg" alt="Icone de Mais">
-									 Adicionar uma Tarefa <hr>
-								</th>
-								<th><ul id="mensagens-erro"></ul></th>
-							</thead>
-							<tbody id="tabela-todo"></tbody>
-						</table>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="task task__lazer">
-				<div class="img__categoria">
-					<img src="../img/lazer.png" alt="Imagem">
-				</div>
-				<div class="doTable">
-					<h2 class="titulo-categoria-tabela">Lazer</h2>
-					<form id="form-adiciona">
-						<input id="do" name="do" type="text" placeholder="Adicionar nome" class="campo">
-					</form>
-					<div class="table">
-						<table>
-							<thead class="table__thead">
-								<th id="adicionar-todo" class="botao bto-principal">
-									 <img src="../img/akar-icons_plus.svg" alt="Icone de Mais">
-									 Adicionar uma Tarefa <hr>
-								</th>
-								<th><ul id="mensagens-erro"></ul></th>
-							</thead>
-							<tbody id="tabela-todo"></tbody>
-						</table>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="task task__especiais">
-				<div class="img__categoria">
-					<img src="../img/especiais.png" alt="Imagem">
-				</div>
-				<div class="doTable">
-					<h2 class="titulo-categoria-tabela">Cuidados Especiais</h2>
-					<form id="form-adiciona">
-						<input id="do" name="do" type="text" placeholder="Adicionar nome" class="campo">
-					</form>
-					<div class="table">
-						<table>
-							<thead class="table__thead">
-								<th id="adicionar-todo" class="botao bto-principal">
-									 <img src="../img/akar-icons_plus.svg" alt="Icone de Mais">
-									 Adicionar uma Tarefa <hr>
-								</th>
-								<th><ul id="mensagens-erro"></ul></th>
-							</thead>
-							<tbody id="tabela-todo"></tbody>
-						</table>
-					</div>
-				</div>
-
-			</div>
-
-		</sction>
-
-
-
-
-		<!-- ... -->
-		<!-- <section class="container">
-			<h2 id="titulo-form">To Do:</h2>
-			<ul id="mensagens-erro"></ul>
-			<form id="form-adiciona">
-				<div class="">
-					<input id="do" name="do" type="text" placeholder="to do" class="campo">
-					<button id="adicionar-todo" class="botao bto-principal">Add</button>
-				</div>
-			</form>
-		</section>
-		<section class="container">
-			<input type="text" id="filtrar-tabela" name="filtro" placeholder="search" class="campo">
-			<table>
-				<thead>
-					<tr>
-						<th>To DO</th>
-					</tr>
-				</thead>
-				<tbody id="tabela-todo">
-
-				</tbody>
-			</table>
-		</section> -->
-
-
-	</main>
-	<script src="../js/form.js"></script>
-	<script src="../js/remover-todo.js"></script>
-	<script src="../js/filtra.js"></script>
-	<script src="../js/check.js"></script>
-	<script src="../js/seleciona-categoria.js"></script>
-
-</body>
-
+    <script src="../js/trabalho/form.js"></script>
+    <script src="../js/trabalho/check.js"></script>
+    <script src="../js/trabalho/remover-todo.js"></script>
+  </body>
 </html>
